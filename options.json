@@ -1,3 +1,4 @@
 {
+    "grunt": true,
     "output": "/var/www/projects/grit96"
 }
