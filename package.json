@@ -1,5 +1,6 @@
 {
   "name": "geraintwhite.co.uk",
+  "repository": "http://github.com/grit96/geraintwhite.co.uk",
   "version": "0.0.0",
   "devDependencies": {
     "grunt": "~0.4.2",

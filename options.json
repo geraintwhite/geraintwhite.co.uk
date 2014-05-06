@@ -1,4 +1,5 @@
 {
     "grunt": true,
-    "output": "/var/www/projects/grit96"
+    "output": "/var/www/projects/grit96",
+    "url": "http://geraintwhite.co.uk"
 }
