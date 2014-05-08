@@ -1,0 +1,19 @@
+#github-widget {
+  li {
+    &:before {
+      @extend .icomoon;
+    }
+    &[data-type*=Push]:before {
+      content: '\e600';
+    }
+    &[data-type*=Issues]:before {
+      content: '\e602';
+    }
+    &[data-type*=Comment]:before {
+      content: '\e601';
+    }
+    &[data-type*=Fork]:before {
+      content: '\e605';
+    }
+  }
+}
