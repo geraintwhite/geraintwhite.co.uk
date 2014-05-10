@@ -41,7 +41,7 @@ function twitter_widget (user, element) {
 
       data = data.slice(0, 10);
       data.forEach(function (item) {
-
+        console.log(item)
         var text = item.text;
 
         // For each entity type..
@@ -82,7 +82,7 @@ function twitter_widget (user, element) {
       });
       element.appendChild(twitter_list);
       var more = document.createElement('a');
-      more.href = 'http://twitter.com/grit96';
+      more.href = 'http://twitter.com/'+user;
       more.innerText = 'More...'
       more.target = '_blank';
       element.appendChild(more);

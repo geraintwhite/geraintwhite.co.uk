@@ -9,7 +9,7 @@ function github_req(user, cb) {
 }
 
 function github_widget(user, element) {
-  github_req('grit96', function (data) {
+  github_req(user, function (data) {
     var github_list = document.createElement('ul');
 
     data = data.slice(0, 10);
@@ -40,7 +40,7 @@ function github_widget(user, element) {
     });
     element.appendChild(github_list);
       var more = document.createElement('a');
-      more.href = 'http://github.com/grit96';
+      more.href = 'http://github.com/'+user;
       more.innerText = 'More...'
       more.target = '_blank';
       element.appendChild(more);
