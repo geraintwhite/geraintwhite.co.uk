@@ -10,7 +10,6 @@
     font-style: normal;
 }
 
-// For @extend
 .icomoon {
   font-family: 'icomoon';
   margin-right: 10px;
@@ -28,4 +27,20 @@ html, body {
     font-family: 'Droid Sans', sans-serif;
 }
 
-@import 'github';
+#sidebar {
+  width: 35%;
+  float: left;
+  #bio {
+    overflow: hidden;
+    background-color: orange;
+    img {
+      float: left;
+    }
+  }
+  @import 'github';
+}
+
+#main {
+  width: 65%;
+  float: right;
+}
