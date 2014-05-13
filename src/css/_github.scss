@@ -1,5 +1,6 @@
 #github-widget {
-  background-color: lime;
+  background-color: $green;
+  border-bottom: 10px solid darken($green, 10%);
   li {
     list-style: none;
     &:before {

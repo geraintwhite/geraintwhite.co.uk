@@ -1,3 +1,6 @@
+$orange: #fb990e;
+$green: #0efb99;
+
 @import url(http://fonts.googleapis.com/css?family=Droid+Sans);
 @font-face {
     font-family: 'icomoon';
@@ -28,11 +31,16 @@ html, body {
 }
 
 #sidebar {
+  section {
+    margin: 20px;
+    padding: 10px;
+  }
   width: 35%;
   float: left;
   #bio {
     overflow: hidden;
-    background-color: orange;
+    background-color: $orange;
+    border-bottom: 10px solid darken($orange, 10%);
     img {
       float: left;
     }
