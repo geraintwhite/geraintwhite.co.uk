@@ -55,7 +55,7 @@ var github_events = {
     return user+' released a new version of '+repo;
   },
   WatchEvent: function (event, user, repo) {
-    return user+' watched '+repo;
+    return user+' starred '+repo;
   }
 }
 
