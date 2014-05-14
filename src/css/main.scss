@@ -1,18 +1,28 @@
 $orange: #fb990e;
 $green: #00cc00;
+$blue: #0d8ad2;
 $bg: #fef2cf;
 
-@mixin background($colour) {
-  background: $colour url('../images/bg.png');
+@mixin background($color) {
+  background: $color url('../images/bg.png');
 }
-@mixin module($colour) {
-  @include background($colour);
+@mixin module($color) {
+  @include background($color);
   margin: 20px;
   padding: 20px;
-  border-bottom: 10px solid darken($colour, 10%);
+  border-bottom: 10px solid darken($color, 10%);
+  &:hover {
+    @include background(rgba($color, 0.9));
+  }
+}
+@mixin link($color) {
+  color: $color;
+  &:hover {
+    color: lighten($color, 10%);
+  }
 }
 
-@import url(http://fonts.googleapis.com/css?family=Raleway|Open+Sans);
+@import url(http://fonts.googleapis.com/css?family=Raleway:700|Open+Sans);
 @font-face {
     font-family: 'icomoon';
     src:url('../fonts/icomoon.eot?sfd1u1');
@@ -43,13 +53,15 @@ body {
   h1, h2 {
     font-family: 'Raleway', sans-serif;
   }
+  a {
+    text-decoration: none;
+  }
 }
 
 #sidebar {
   width: 35%;
   float: left;
   a {
-    text-decoration: none;
     color: white;
     &:hover {
       color: black
@@ -70,5 +82,8 @@ body {
   float: right;
   article {
     @include module(white);
+    a {
+      @include link($blue);
+    }
   }
 }
