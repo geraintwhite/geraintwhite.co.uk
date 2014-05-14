@@ -1,8 +1,18 @@
 $orange: #fb990e;
 $green: #00cc00;
-$bg: '../images/bg.png';
+$bg: #fef2cf;
 
-@import url(http://fonts.googleapis.com/css?family=Droid+Sans|Raleway|Open+Sans);
+@mixin background($colour) {
+  background: $colour url('../images/bg.png');
+}
+@mixin module($colour) {
+  @include background($colour);
+  margin: 20px;
+  padding: 20px;
+  border-bottom: 10px solid darken($colour, 10%);
+}
+
+@import url(http://fonts.googleapis.com/css?family=Raleway|Open+Sans);
 @font-face {
     font-family: 'icomoon';
     src:url('../fonts/icomoon.eot?sfd1u1');
@@ -27,13 +37,15 @@ $bg: '../images/bg.png';
   -moz-osx-font-smoothing: grayscale;
 }
 
-html, body {
-  font-family: 'Droid Sans', sans-serif;
-  background: #fef2cf url(#{$bg});
+body {
+  font-family: 'Open Sans', sans-serif;
+  @include background($bg);
+  h1, h2 {
+    font-family: 'Raleway', sans-serif;
+  }
 }
 
 #sidebar {
-  font-family: 'Open Sans', sans-serif;
   width: 35%;
   float: left;
   a {
@@ -43,17 +55,9 @@ html, body {
       color: black
     }
   }
-  section {
-    margin: 20px;
-    padding: 10px;
-  }
   #bio {
-    h1 {
-      font-family: 'Raleway', sans-serif;
-    }
     overflow: hidden;
-    background: $orange url(#{$bg});
-    border-bottom: 10px solid darken($orange, 10%);
+    @include module($orange);
     img {
       float: left;
     }
@@ -64,4 +68,7 @@ html, body {
 #main {
   width: 65%;
   float: right;
+  article {
+    @include module(white);
+  }
 }

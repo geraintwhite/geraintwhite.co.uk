@@ -1,6 +1,5 @@
 #github-widget {
-  background: $green url(#{$bg});
-  border-bottom: 10px solid darken($green, 10%);
+  @include module($green);
   li {
     list-style: none;
     &:hover {
