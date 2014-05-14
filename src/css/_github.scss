@@ -1,8 +1,11 @@
 #github-widget {
-  background-color: $green;
+  background: $green url(#{$bg});
   border-bottom: 10px solid darken($green, 10%);
   li {
     list-style: none;
+    &:hover {
+      background-color: rgba(255, 255, 255, 0.3);
+    }
     &:before {
       @extend .icomoon;
     }

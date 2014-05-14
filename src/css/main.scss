@@ -1,7 +1,8 @@
 $orange: #fb990e;
-$green: #0efb99;
+$green: #00cc00;
+$bg: '../images/bg.png';
 
-@import url(http://fonts.googleapis.com/css?family=Droid+Sans);
+@import url(http://fonts.googleapis.com/css?family=Droid+Sans|Raleway|Open+Sans);
 @font-face {
     font-family: 'icomoon';
     src:url('../fonts/icomoon.eot?sfd1u1');
@@ -27,19 +28,31 @@ $green: #0efb99;
 }
 
 html, body {
-    font-family: 'Droid Sans', sans-serif;
+  font-family: 'Droid Sans', sans-serif;
+  background: #fef2cf url(#{$bg});
 }
 
 #sidebar {
+  font-family: 'Open Sans', sans-serif;
+  width: 35%;
+  float: left;
+  a {
+    text-decoration: none;
+    color: white;
+    &:hover {
+      color: black
+    }
+  }
   section {
     margin: 20px;
     padding: 10px;
   }
-  width: 35%;
-  float: left;
   #bio {
+    h1 {
+      font-family: 'Raleway', sans-serif;
+    }
     overflow: hidden;
-    background-color: $orange;
+    background: $orange url(#{$bg});
     border-bottom: 10px solid darken($orange, 10%);
     img {
       float: left;
