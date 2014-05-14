@@ -6,17 +6,44 @@
     &:before {
       @extend .icomoon;
     }
-    &[data-type*=Push]:before {
-      content: '\e600';
+    &[data-type^=Push]:before {
+      content: '\e603';
     }
-    &[data-type*=Issues]:before {
-      content: '\e602';
+    &[data-type^=Issues]:before {
+      content: '\e607';
     }
     &[data-type*=Comment]:before {
+      content: '\e604';
+    }
+    &[data-type^=Fork]:before {
+      content: '\e609';
+    }
+    &[data-type^=Create]:before {
       content: '\e601';
     }
-    &[data-type*=Fork]:before {
+    &[data-type^=Delete]:before {
+      content: '\e608';
+    }
+    &[data-type^=Gollum]:before {
+      content: '\e600';
+    }
+    &[data-type^=Member]:before {
       content: '\e605';
+    }
+    &[data-type^=Public]:before {
+      content: '\e606';
+    }
+    &[data-type=PullRequestEvent]:before {
+      content: '\e602';
+    }
+    &[data-type^=Deploy]:before {
+      content: '\e60a';
+    }
+    &[data-type^=Release]:before {
+      content: '\e60e';
+    }
+    &[data-type^=Watch]:before {
+      content: '\e60b';
     }
   }
 }
