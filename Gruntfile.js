@@ -115,8 +115,7 @@ module.exports = function(grunt) {
   grunt.registerTask('default', [
     'uglify',
     'sass',
-    'autoprefixer:dev',
-    'autoprefixer:main',
+    'autoprefixer',
     'cssmin',
     'processhtml',
     'htmlmin',

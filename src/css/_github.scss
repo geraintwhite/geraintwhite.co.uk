@@ -1,5 +1,4 @@
 #github {
-  @include module($green);
   li {
     list-style: none;
     &:hover {
@@ -46,6 +45,14 @@
     }
     &[data-type^=Watch]:before {
       content: '\e60b';
+    }
+    a {
+      display: inline-block;
+    }
+  }
+  ul, &> a {
+    @media (max-width: 900px) {
+      display: none;
     }
   }
 }

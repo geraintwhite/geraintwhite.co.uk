@@ -59,8 +59,6 @@ body {
 }
 
 #sidebar {
-  width: 35%;
-  float: left;
   a {
     color: white;
     &:hover {
@@ -70,20 +68,33 @@ body {
   #bio {
     overflow: hidden;
     @include module($orange);
-    img {
-      float: left;
+    text-align: center;
+    @media (min-width: 1280px) {
+      text-align: left;
+      img {
+        float: left;
+      }
     }
   }
-  @import 'github';
+  #social {
+    @include module($green);
+    @import 'github';
+  }
+  @media (min-width: 700px) {
+    width: 35%;
+    float: left;
+  }
 }
 
 #main {
-  width: 65%;
-  float: right;
   article {
     @include module(white);
     a {
       @include link($blue);
     }
+  }
+  @media (min-width: 700px) {
+    width: 65%;
+    float: right;
   }
 }

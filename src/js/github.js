@@ -65,13 +65,15 @@ function github_widget(user, element) {
 
     data = data.slice(0, 10);
     data.forEach(function (item) {
-      var user = item.actor.login.charAt(0).toUpperCase() + item.actor.login.slice(1); // Capitalize
-      var repo = '<a href="http://github.com/'+item.repo.name+'" target="_blank">'+item.repo.name+'</a>';
+      var user, repo, event_str;
+
+      user = '<a href="http://github.com/'+item.actor.login+'" target="_blank">'+item.actor.login+'</a>';
+      repo = '<a href="http://github.com/'+item.repo.name+'" target="_blank">'+item.repo.name+'</a>';
 
       if (github_events[item.type]) {
-        var event_str = github_events[item.type](item, user, repo);
+        event_str = github_events[item.type](item, user, repo);
       } else {
-        var event_str = item.type;
+        event_str = item.type;
       }
 
       if (event_str) {
