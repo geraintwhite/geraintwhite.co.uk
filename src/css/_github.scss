@@ -1,4 +1,5 @@
-#github {
+#github-widget {
+  @include module($green);
   li {
     list-style: none;
     &:hover {
@@ -46,13 +47,11 @@
     &[data-type^=Watch]:before {
       content: '\e60b';
     }
-    a {
+    a:nth-child(2) {
       display: inline-block;
     }
   }
-  ul, &> a {
-    @media (max-width: 900px) {
-      display: none;
-    }
+  @media (max-width: 1279px) {
+    display: none;
   }
 }

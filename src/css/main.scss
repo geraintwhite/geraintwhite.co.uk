@@ -15,6 +15,15 @@ $bg: #fef2cf;
     @include background(rgba($color, 0.9));
   }
 }
+@mixin social($color, $img) {
+  background-color: $color;
+  &:hover {
+    background-color: lighten($color, 10%);
+  }
+  a {
+    background-image: url(../images/#{$img});
+  }
+}
 @mixin link($color) {
   color: $color;
   &:hover {
@@ -77,9 +86,34 @@ body {
     }
   }
   #social {
-    @include module($green);
-    @import 'github';
+    $twitter: #3f93e9;
+    $gplus: #da4735;
+    $github: black;
+    @include module(white);
+    text-align: center;
+    div {
+      display: inline-block;
+      width: 60px;
+      height: 50px;
+      padding: 20px;
+    }
+    a {
+      height: 100%;
+      display: block;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+    #twitter {
+      @include social($twitter, 'twitter.png')
+    }
+    #gplus {
+      @include social($gplus, 'gplus.png')
+    }
+    #github {
+      @include social($github, 'github.png')
+    }
   }
+  @import 'github';
   @media (min-width: 700px) {
     width: 35%;
     float: left;
