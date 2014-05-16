@@ -2,6 +2,9 @@ $orange: #fb990e;
 $green: #00cc00;
 $blue: #0d8ad2;
 $bg: #fef2cf;
+$sidebar: 450px;
+$largers: 1280px;
+$smallres: 1024px;
 
 @mixin background($color) {
   background: $color url('../images/bg.png');
@@ -78,12 +81,6 @@ body {
     overflow: hidden;
     @include module($orange);
     text-align: center;
-    @media (min-width: 1280px) {
-      text-align: left;
-      img {
-        float: left;
-      }
-    }
   }
   #social {
     $twitter: #3f93e9;
@@ -114,8 +111,8 @@ body {
     }
   }
   @import 'github';
-  @media (min-width: 800px) {
-    width: 35%;
+  @media (min-width: $smallres) {
+    width: $sidebar;
     float: left;
   }
 }
@@ -127,8 +124,8 @@ body {
       @include link($blue);
     }
   }
-  @media (min-width: 800px) {
-    width: 65%;
-    float: right;
+  @media (min-width: $smallres) {
+    width: calc(100% - #{$sidebar});
+    float: left;
   }
 }
