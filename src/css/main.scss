@@ -114,7 +114,7 @@ body {
     }
   }
   @import 'github';
-  @media (min-width: 700px) {
+  @media (min-width: 800px) {
     width: 35%;
     float: left;
   }
@@ -127,7 +127,7 @@ body {
       @include link($blue);
     }
   }
-  @media (min-width: 700px) {
+  @media (min-width: 800px) {
     width: 65%;
     float: right;
   }
