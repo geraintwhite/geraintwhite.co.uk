@@ -1,12 +1,20 @@
 #github-widget {
   @include module($green);
+  display: none;
+  ul {
+    padding-left: 1em;
+  }
   li {
+    position: relative;
+    padding-left: 1em;
     list-style: none;
     &:hover {
       background-color: rgba(255, 255, 255, 0.3);
     }
     &:before {
       @extend .icomoon;
+      position: absolute;
+      left: -1em;
     }
     &[data-type^=Push]:before {
       content: '\e603';
