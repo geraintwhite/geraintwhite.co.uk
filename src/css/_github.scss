@@ -59,7 +59,7 @@
       display: inline-block;
     }
   }
-  @media (max-width: calc(#{$smallres} - 1)) {
-    display: none;
+  @media (min-width: $breakpoint) {
+    display: block;
   }
 }
