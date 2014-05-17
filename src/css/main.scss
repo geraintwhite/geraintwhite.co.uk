@@ -78,6 +78,10 @@ body {
     overflow: hidden;
     @include module($orange);
     text-align: center;
+    @media (min-width: $breakpoint) {
+      text-align: left;
+      img { float: left; }
+    }
   }
   #social {
     $twitter: #3f93e9;
