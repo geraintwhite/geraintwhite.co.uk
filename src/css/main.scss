@@ -5,29 +5,13 @@ $bg: #fef2cf;
 $sidebar: 450px;
 $breakpoint: 1024px;
 
-@mixin background($color) {
-  background: $color url('../images/bg.png');
-}
 @mixin module($color) {
-  @include background($color);
   margin: 20px;
   padding: 20px;
   border-bottom: 10px solid darken($color, 10%);
+  background: $color url('../images/bg.png');
   &:hover {
-    @include background(rgba($color, 0.9));
-  }
-}
-@mixin social($color, $img) {
-  background-color: $color;
-  background-image: url(../images/#{$img});
-  &:hover {
-    background-color: lighten($color, 10%);
-  }
-}
-@mixin link($color) {
-  color: $color;
-  &:hover {
-    color: lighten($color, 10%);
+    background: rgba($color, 0.9) url('../images/bg.png');
   }
 }
 
@@ -56,8 +40,22 @@ $breakpoint: 1024px;
   -moz-osx-font-smoothing: grayscale;
 }
 
+.hover-overlay {
+  position: relative;
+  &:hover:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.1);
+    z-index: 100;
+  }
+}
+
 body {
-  @include background($bg);
+  background: $bg url('../images/bg.png');
   font-family: 'Open Sans', sans-serif;
   h1, h2 {
     font-family: 'Raleway', sans-serif;
@@ -90,6 +88,7 @@ body {
     @include module(white);
     text-align: center;
     a {
+      @extend .hover-overlay;
       display: inline-block;
       width: 60px;
       height: 50px;
@@ -98,13 +97,16 @@ body {
       background-repeat: no-repeat;
     }
     .twitter {
-      @include social($twitter, 'twitter.png')
+      background-color: $twitter;
+      background-image: url('../images/twitter.png');
     }
     .gplus {
-      @include social($gplus, 'gplus.png')
+      background-color: $gplus;
+      background-image: url('../images/gplus.png');
     }
     .github {
-      @include social($github, 'github.png')
+      background-color: $github;
+      background-image: url('../images/github.png');
     }
   }
   @media (min-width: $breakpoint) {
@@ -116,14 +118,14 @@ body {
 @import 'github';
 
 #main {
+  overflow: auto;
   article {
     @include module(white);
     a {
-      @include link($blue);
+      color: $blue;
+      &:hover {
+        color: lighten($blue, 10%);
+      }
     }
-  }
-  @media (min-width: $breakpoint) {
-    width: calc(100% - #{$sidebar});
-    float: right;
   }
 }

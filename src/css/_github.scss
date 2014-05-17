@@ -1,16 +1,13 @@
 #github-widget {
   @include module($green);
-  display: none;
   ul {
     padding-left: 1em;
   }
   li {
+    @extend .hover-overlay;
     position: relative;
     padding-left: 1em;
     list-style: none;
-    &:hover {
-      background-color: rgba(255, 255, 255, 0.3);
-    }
     &:before {
       @extend .icomoon;
       position: absolute;
@@ -59,6 +56,7 @@
       display: inline-block;
     }
   }
+  display: none;
   @media (min-width: $breakpoint) {
     display: block;
   }
