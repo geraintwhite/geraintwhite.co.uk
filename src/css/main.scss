@@ -97,16 +97,13 @@ body {
       background-repeat: no-repeat;
     }
     .twitter {
-      background-color: $twitter;
-      background-image: url('../images/twitter.png');
+      background: $twitter url('../images/twitter.png');
     }
     .gplus {
-      background-color: $gplus;
-      background-image: url('../images/gplus.png');
+      background: $gplus url('../images/gplus.png');
     }
     .github {
-      background-color: $github;
-      background-image: url('../images/github.png');
+      background: $github url('../images/github.png');
     }
   }
   @media (min-width: $breakpoint) {
