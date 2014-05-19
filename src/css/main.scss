@@ -118,7 +118,6 @@ body {
 @import 'github';
 
 #main {
-  overflow: auto;
   article {
     @include module(white);
     a {
@@ -127,5 +126,8 @@ body {
         color: lighten($blue, 10%);
       }
     }
+  }
+  @media (min-width: $breakpoint) {
+    overflow: auto;
   }
 }
