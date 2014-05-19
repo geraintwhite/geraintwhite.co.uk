@@ -9,18 +9,18 @@ $breakpoint: 1024px;
   margin: 20px;
   padding: 20px;
   border-bottom: 10px solid darken($color, 10%);
-  background: $color url('../images/bg.png');
-  &:hover { background: rgba($color, 0.9) url('../images/bg.png'); }
+  background: $color url(../images/bg.png);
+  &:hover { background: rgba($color, 0.9) url(../images/bg.png); }
 }
 
 @import url(http://fonts.googleapis.com/css?family=Raleway:700|Open+Sans);
 @font-face {
     font-family: 'icomoon';
-    src:url('../fonts/icomoon.eot?sfd1u1');
-    src:url('../fonts/icomoon.eot?#iefixsfd1u1') format('embedded-opentype'),
-        url('../fonts/icomoon.woff?sfd1u1') format('woff'),
-        url('../fonts/icomoon.ttf?sfd1u1') format('truetype'),
-        url('../fonts/icomoon.svg?sfd1u1#icomoon') format('svg');
+    src:url(../fonts/icomoon.eot?sfd1u1);
+    src:url(../fonts/icomoon.eot?#iefixsfd1u1) format('embedded-opentype'),
+        url(../fonts/icomoon.woff?sfd1u1) format('woff'),
+        url(../fonts/icomoon.ttf?sfd1u1) format('truetype'),
+        url(../fonts/icomoon.svg?sfd1u1#icomoon) format('svg');
     font-weight: normal;
     font-style: normal;
 }
@@ -53,7 +53,7 @@ $breakpoint: 1024px;
 }
 
 body {
-  background: $bg url('../images/bg.png');
+  background: $bg url(../images/bg.png);
   font-family: 'Open Sans', sans-serif;
   h1, h2 { font-family: 'Raleway', sans-serif; }
   a { text-decoration: none; }
@@ -62,7 +62,7 @@ body {
 #sidebar {
   a {
     color: white;
-    &:hover { color: black }
+    &:hover { color: black; }
   }
   #bio {
     overflow: hidden;
@@ -90,15 +90,15 @@ body {
     }
     .twitter {
       background-color: $twitter;
-      background-image: url('../images/twitter.png');
+      background-image: url(../images/twitter.png);
     }
     .gplus {
       background-color: $gplus;
-      background-image: url('../images/gplus.png');
+      background-image: url(../images/gplus.png);
     }
     .github {
       background-color: $github;
-      background-image: url('../images/github.png');
+      background-image: url(../images/github.png);
     }
   }
   @media (min-width: $breakpoint) {
