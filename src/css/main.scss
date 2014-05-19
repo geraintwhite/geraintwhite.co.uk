@@ -42,7 +42,7 @@ $breakpoint: 1024px;
 
 .hover-overlay {
   position: relative;
-  &:hover:after {
+  &:hover:before {
     content: '';
     position: absolute;
     top: 0;
