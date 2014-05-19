@@ -10,9 +10,7 @@ $breakpoint: 1024px;
   padding: 20px;
   border-bottom: 10px solid darken($color, 10%);
   background: $color url('../images/bg.png');
-  &:hover {
-    background: rgba($color, 0.9) url('../images/bg.png');
-  }
+  &:hover { background: rgba($color, 0.9) url('../images/bg.png'); }
 }
 
 @import url(http://fonts.googleapis.com/css?family=Raleway:700|Open+Sans);
@@ -57,20 +55,14 @@ $breakpoint: 1024px;
 body {
   background: $bg url('../images/bg.png');
   font-family: 'Open Sans', sans-serif;
-  h1, h2 {
-    font-family: 'Raleway', sans-serif;
-  }
-  a {
-    text-decoration: none;
-  }
+  h1, h2 { font-family: 'Raleway', sans-serif; }
+  a { text-decoration: none; }
 }
 
 #sidebar {
   a {
     color: white;
-    &:hover {
-      color: black
-    }
+    &:hover { color: black }
   }
   #bio {
     overflow: hidden;
@@ -122,12 +114,8 @@ body {
     @include module(white);
     a {
       color: $blue;
-      &:hover {
-        color: lighten($blue, 10%);
-      }
+      &:hover { color: lighten($blue, 10%); }
     }
   }
-  @media (min-width: $breakpoint) {
-    overflow: auto;
-  }
+  @media (min-width: $breakpoint) { overflow: auto; }
 }

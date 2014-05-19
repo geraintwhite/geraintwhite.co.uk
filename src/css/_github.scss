@@ -1,63 +1,32 @@
 #github-widget {
   @include module($green);
-  ul {
-    padding-left: 1em;
-  }
+  ul { padding: 0; }
   li {
     position: relative;
-    padding-left: 1em;
+    padding-left: 2em;
     list-style: none;
     &:before {
       @extend .icomoon;
       position: absolute;
-      left: -1em;
+      left: 0.5em;
     }
-    &[data-type^=Push]:before {
-      content: '\e603';
-    }
-    &[data-type^=Issues]:before {
-      content: '\e607';
-    }
-    &[data-type*=Comment]:before {
-      content: '\e604';
-    }
-    &[data-type^=Fork]:before {
-      content: '\e609';
-    }
-    &[data-type^=Create]:before {
-      content: '\e601';
-    }
-    &[data-type^=Delete]:before {
-      content: '\e608';
-    }
-    &[data-type^=Gollum]:before {
-      content: '\e600';
-    }
-    &[data-type^=Member]:before {
-      content: '\e605';
-    }
-    &[data-type^=Public]:before {
-      content: '\e606';
-    }
-    &[data-type=PullRequestEvent]:before {
-      content: '\e602';
-    }
-    &[data-type^=Deploy]:before {
-      content: '\e60a';
-    }
-    &[data-type^=Release]:before {
-      content: '\e60e';
-    }
-    &[data-type^=Watch]:before {
-      content: '\e60b';
-    }
-    a:nth-child(2) {
-      display: inline-block;
-    }
+    &[data-type^=Push]:before { content: '\e603'; }
+    &[data-type^=Issues]:before { content: '\e607'; }
+    &[data-type^=Fork]:before { content: '\e609'; }
+    &[data-type^=Create]:before { content: '\e601'; }
+    &[data-type^=Delete]:before { content: '\e608'; }
+    &[data-type^=Gollum]:before { content: '\e600'; }
+    &[data-type^=Member]:before { content: '\e605'; }
+    &[data-type^=Public]:before { content: '\e606'; }
+    &[data-type^=Deploy]:before { content: '\e60a'; }
+    &[data-type^=Release]:before { content: '\e60e'; }
+    &[data-type^=Watch]:before { content: '\e60b'; }
+    &[data-type*=Comment]:before { content: '\e604'; }
+    &[data-type=PullRequestEvent]:before { content: '\e602'; }
+
+    a:nth-child(2) { display: inline-block; }
     &:hover { background-color: rgba(255, 255, 255, 0.3); }
   }
   display: none;
-  @media (min-width: $breakpoint) {
-    display: block;
-  }
+  @media (min-width: $breakpoint) { display: block; }
 }
