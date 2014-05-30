@@ -30,8 +30,8 @@ var github_events = {
   IssueCommentEvent: function (event, user, repo) {
     return user+' commented on an issue in '+repo;
   },
-  IssuesEvent: function (event, user, repo) {
-    return user+' created an issue in '+repo;
+  IssuesEvent: function (event, user, repo, action) {
+    return user+' '+action+' an issue in '+repo;
   },
   MemberEvent: function (event, user, repo) {
     return user+' was added to '+repo;
@@ -71,7 +71,7 @@ function github_widget(user, element) {
       repo = '<a href="http://github.com/'+item.repo.name+'" target="_blank">'+item.repo.name+'</a>';
 
       if (github_events[item.type]) {
-        event_str = github_events[item.type](item, user, repo);
+        event_str = github_events[item.type](item, user, repo, item.payload.action);
       } else {
         event_str = item.type;
       }
