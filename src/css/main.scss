@@ -104,7 +104,7 @@ body {
   }
   @media (min-width: $breakpoint) {
     width: $sidebar;
-    float: left;
+    position: fixed;
   }
 }
 
@@ -128,5 +128,8 @@ body {
     }
     overflow: hidden;
   }
-  @media (min-width: $breakpoint) { overflow: auto; }
+  @media (min-width: $breakpoint) {
+    position: absolute;
+    left: $sidebar;
+  }
 }
