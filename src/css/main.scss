@@ -129,9 +129,7 @@ body {
     .lang {
       font-size: 0.75em;
       color: #999;
-      &:before {
-        content: ' - ';
-      }
+      &:before { content: ' - '; }
     }
     overflow: hidden;
   }
