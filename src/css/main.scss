@@ -126,6 +126,13 @@ body {
       margin: 10px;
       @media (max-width: 480px) { width: calc(100% - 20px); }
     }
+    .lang {
+      font-size: 0.75em;
+      color: #999;
+      &:before {
+        content: ' - ';
+      }
+    }
     overflow: hidden;
   }
   @media (min-width: $breakpoint) {
