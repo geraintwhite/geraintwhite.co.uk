@@ -12,14 +12,11 @@ var github_events = {
   CommitCommentEvent: function (event, user, repo) {
     return user+' commented on a commit in '+repo;
   },
-  CreateEvent: function (event, user, repo) {
-    return user+' created '+repo;
+  CreateEvent: function (event, user, repo, payload) {
+    return user+' created '+(payload.ref?'a '+payload.ref_type+' in ':'')+repo;
   },
-  DeleteEvent: function (event, user, repo) {
-    return user+' deleted '+repo;
-  },
-  DeploymentEvent: function (event, user, repo) {
-    return user+' deployed '+repo;
+  DeleteEvent: function (event, user, repo, payload) {
+    return user+' deleted a '+payload.ref_type+' in '+repo;
   },
   ForkEvent: function (event, user, repo) {
     return user+' forked '+repo;
@@ -30,11 +27,11 @@ var github_events = {
   IssueCommentEvent: function (event, user, repo) {
     return user+' commented on an issue in '+repo;
   },
-  IssuesEvent: function (event, user, repo, action) {
-    return user+' '+action+' an issue in '+repo;
+  IssuesEvent: function (event, user, repo, payload) {
+    return user+' '+payload.action+' an issue in '+repo;
   },
   MemberEvent: function (event, user, repo) {
-    return user+' was added to '+repo;
+    return user+' added a collaborator to '+repo;
   },
   PageBuildEvent: function (event, user, repo) {
     return null;
@@ -42,8 +39,8 @@ var github_events = {
   PublicEvent: function (event, user, repo) {
     return user+' made '+repo+' open source';
   },
-  PullRequestEvent: function (event, user, repo) {
-    return user+' created pull request on '+repo;
+  PullRequestEvent: function (event, user, repo, payload) {
+    return user+' '+payload.action+' a pull request on '+repo;
   },
   PullRequestReviewCommentEvent: function (event, user, repo) {
     return user+' commented on a pull request on '+repo;
@@ -69,9 +66,9 @@ function github_widget(user, element) {
 
       user = '<a href="http://github.com/'+item.actor.login+'" target="_blank">'+item.actor.login+'</a>';
       repo = '<a href="http://github.com/'+item.repo.name+'" target="_blank">'+item.repo.name+'</a>';
-
+      console.log(item.type, item.payload)
       if (github_events[item.type]) {
-        event_str = github_events[item.type](item, user, repo, item.payload.action);
+        event_str = github_events[item.type](item, user, repo, item.payload);
       } else {
         event_str = item.type;
       }

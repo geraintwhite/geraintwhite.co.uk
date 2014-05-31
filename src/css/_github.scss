@@ -18,7 +18,6 @@
     &[data-type^=Gollum]:before { content: '\e600'; }
     &[data-type^=Member]:before { content: '\e605'; }
     &[data-type^=Public]:before { content: '\e606'; }
-    &[data-type^=Deploy]:before { content: '\e60a'; }
     &[data-type^=Release]:before { content: '\e60e'; }
     &[data-type^=Watch]:before { content: '\e60b'; }
     &[data-type*=Comment]:before { content: '\e604'; }
