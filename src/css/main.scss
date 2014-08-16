@@ -68,9 +68,13 @@ body {
     overflow: hidden;
     @include module($orange);
     text-align: center;
+    img { display: none;}
     @media (min-width: $breakpoint) {
       text-align: left;
-      img { float: left; }
+      img {
+        display: block;
+        float: left;
+      }
     }
   }
   #social {
