@@ -5,7 +5,7 @@
     "url": "http://geraintwhite.co.uk",
     "email": [
         "mail@geraintwhite.co.uk"
-    ]
+    ],
     "hosts": {
         "geraint-vps": {
             "output": "/var/www",
