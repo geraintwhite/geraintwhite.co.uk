@@ -1,6 +1,5 @@
 {
     "grunt": true,
-    "node": true,
     "output": "/var/www/projects/grit96",
     "url": "http://geraintwhite.co.uk",
     "email": [
