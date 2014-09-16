@@ -1,7 +1,5 @@
 {
     "grunt": true,
-    "output": "/var/www/projects/grit96",
-    "url": "http://geraintwhite.co.uk",
     "email": [
         "mail@geraintwhite.co.uk"
     ],
@@ -10,7 +8,12 @@
             "output": "/var/www",
             "ignore": [
                 "adminer.php"
-            ]
+            ],
+            "url": "http://geraintwhite.co.uk"
+        },
+        "raspberrypi": {
+            "output": "/var/www/projects/grit96",
+            "url": "http://pi.dvbris.com/projects/grit96"
         }
     }
 }
