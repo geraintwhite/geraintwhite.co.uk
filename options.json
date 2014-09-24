@@ -7,7 +7,8 @@
         "geraint-vps": {
             "output": "/var/www",
             "ignore": [
-                "adminer.php"
+                "adminer.php",
+                "dvbris.co.uk"
             ],
             "url": "http://geraintwhite.co.uk"
         },
