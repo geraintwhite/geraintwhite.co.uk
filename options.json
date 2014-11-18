@@ -5,10 +5,7 @@
     ],
     "hosts": {
         "geraint-vps": {
-            "output": "/var/www",
-            "ignore": [
-                "adminer.php"
-            ],
+            "output": "/var/www/geraintwhite.co.uk",
             "url": "http://geraintwhite.co.uk"
         },
         "raspberrypi": {
