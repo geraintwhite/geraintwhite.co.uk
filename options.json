@@ -8,7 +8,7 @@
             "output": "/var/www/geraintwhite.co.uk",
             "url": "http://geraintwhite.co.uk"
         },
-        "raspberrypi": {
+        "k9": {
             "output": "/var/www/projects/grit96",
             "url": "http://pi.dvbris.com/projects/grit96"
         }
