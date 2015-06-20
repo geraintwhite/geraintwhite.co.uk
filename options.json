@@ -1,6 +1,6 @@
 {
-    "grunt": true,
-	"build_dir": "build",
+    "build_cmd": "gulp",
+  	"build_dir": "build",
     "email": [
         "mail@geraintwhite.co.uk"
     ],
