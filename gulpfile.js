@@ -32,7 +32,13 @@ gulp.task('css-dev', function () {
 });
 
 gulp.task('js', function () {
-  return gulp.src('./src/js/*.js')
+  return gulp.src([
+    'google.js',
+    'utils.js',
+    'github.js',
+    'twitter.js',
+    'home.js'
+  ], {cwd: './src/js/'})
     .pipe(concat('main.min.js'))
     .pipe(uglify())
     .pipe(gulp.dest('./build/js/'));
