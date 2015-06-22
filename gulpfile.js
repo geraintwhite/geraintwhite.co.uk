@@ -9,6 +9,7 @@ var gulp = require('gulp'),
     sourcemaps = require('gulp-sourcemaps'),
     minify = require('gulp-minify-css'),
     prefix = require('gulp-autoprefixer'),
+    template = require('gulp-md-template');
     plumber = require('gulp-plumber');
 
 
@@ -46,6 +47,7 @@ gulp.task('js', function () {
 
 gulp.task('html', function () {
   return gulp.src('./src/**/*.html')
+    .pipe(template('./src/articles/'))
     .pipe(processhtml())
     .pipe(htmlmin({
       removeComments: true,
