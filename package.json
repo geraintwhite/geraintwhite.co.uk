@@ -2,6 +2,9 @@
   "name": "geraintwhite.co.uk",
   "repository": "http://github.com/grit96/geraintwhite.co.uk",
   "version": "0.0.0",
+  "scripts": {
+    "build": "gulp"
+  },
   "devDependencies": {
     "gulp": "^3.9.0",
     "gulp-autoprefixer": "^2.3.1",

@@ -1,6 +1,6 @@
 {
-    "build_cmd": "./node_modules/.bin/gulp",
-  	"build_dir": "build",
+    "build_cmd": "npm run build",
+    "build_dir": "build",
     "email": [
         "mail@geraintwhite.co.uk"
     ],
