@@ -1,16 +1,16 @@
 {
-    "build_cmd": "npm run build",
-    "build_dir": "build",
+    "build_cmd": ["npm update", "npm run build"],
+    "copy_from": "build",
     "email": [
         "mail@geraintwhite.co.uk"
     ],
     "hosts": {
         "geraint-vps": {
-            "output": "/var/www/geraintwhite.co.uk",
+            "copy_to": "/var/www/geraintwhite.co.uk",
             "url": "http://geraintwhite.co.uk"
         },
         "k9": {
-            "output": "/var/www/projects/grit96",
+            "copy_to": "/var/www/projects/grit96",
             "url": "http://pi.dvbris.com/projects/grit96"
         }
     }
