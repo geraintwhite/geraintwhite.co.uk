@@ -7,3 +7,5 @@ I have been installing Node.js modules from npm for a long time to use with the 
 * [logging-tool](https://www.npmjs.com/package/logging-tool) - Colourful logging module with different logging levels
 * [markdown-templator](https://www.npmjs.com/package/markdown-templator) - Include markdown files in an HTML template
 * [gulp-md-template](https://www.npmjs.com/package/gulp-md-template) - Gulp plugin for markdown-templator (used to build this site!)
+* [template-html](https://www.npmjs.com/package/template-html) - Generate static HTML files from templates and content files
+* [gulp-template-html](https://www.npmjs.com/package/gulp-template-html) - Gulp plugin for template-html (used to build [dvbris.co.uk](http://dvbris.co.uk))
