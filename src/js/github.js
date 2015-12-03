@@ -64,8 +64,8 @@ function github_widget(user, element) {
     data.forEach(function (item) {
       var user, repo, event_str;
 
-      user = '<a href="http://github.com/'+item.actor.login+'" target="_blank">'+item.actor.login+'</a>';
-      repo = '<a href="http://github.com/'+item.repo.name+'" target="_blank">'+item.repo.name+'</a>';
+      user = '<a href="https://github.com/'+item.actor.login+'" target="_blank">'+item.actor.login+'</a>';
+      repo = '<a href="https://github.com/'+item.repo.name+'" target="_blank">'+item.repo.name+'</a>';
       console.log(item.type, item.payload)
       if (github_events[item.type]) {
         event_str = github_events[item.type](item, user, repo, item.payload);
@@ -84,7 +84,7 @@ function github_widget(user, element) {
     });
     element.appendChild(github_list);
       var more = document.createElement('a');
-      more.href = 'http://github.com/' + user;
+      more.href = 'https://github.com/' + user;
       more.innerText = 'More...'
       more.target = '_blank';
       element.appendChild(more);

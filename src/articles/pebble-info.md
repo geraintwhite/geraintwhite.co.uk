@@ -2,11 +2,11 @@
 
 ## [Pebble Info](https://github.com/grit96/pebble_info)<span class="lang">JavaScript</span>
 
-Recently I obtained a Pebble Smartwatch. I was keen to get into app development for it and, with my JavaScript background, the best place to start was [PebbleJS](http://developer.getpebble.com/docs/pebblejs/).
+Recently I obtained a Pebble Smartwatch. I was keen to get into app development for it and, with my JavaScript background, the best place to start was [PebbleJS](https://developer.getpebble.com/docs/pebblejs/).
 
 For my first app I decided to create a monitoring dashboard to keep track of my servers. It currently has the following features:
 
-*   System Info page for my [Raspberry Pi web server](http://pi.dvbris.com)
+*   System Info page for my [Raspberry Pi web server](https://pi.dvbris.com)
 *   My GitHub activity feed
 *   Latest build information for [GitHub Listener](https://github.com/itsapi/github-listener) on my Raspberry Pi and VPS
 

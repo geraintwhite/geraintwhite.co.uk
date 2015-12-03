@@ -2,7 +2,7 @@
 
 ## [Pycraft](https://github.com/itsapi/pycraft)<span class="lang">Python</span>
 
-To improve my Python skills I developed a game for the terminal with [Olls](http://oliverfaircliff.com). Pycraft is a text based game inspired by [Minecraft](https://minecraft.net). It is quite advanced so far, with the following features:
+To improve my Python skills I developed a game for the terminal with [Olls](https://oliverfaircliff.com). Pycraft is a text based game inspired by [Minecraft](https://minecraft.net). It is quite advanced so far, with the following features:
 
 *   Random terrain generation with ores, hills and trees
 *   Auto-saving world and multiple save support
