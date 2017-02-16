@@ -1,6 +1,6 @@
 function twitter_req (api, cb) {
   makeRequest(
-    'https://node.dvbris.com/twitter?api_url=' +
+    'https://twitter.oliverfaircliff.com/twitter?api_url=' +
       encodeURIComponent('https://api.twitter.com/1.1/' + api),
     function (text) {
       var data = JSON.parse(text);
