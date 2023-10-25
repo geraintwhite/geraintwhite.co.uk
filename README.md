@@ -1,4 +1,4 @@
-[geraintwhite.co.uk]()
+[geraintwhite.co.uk](https://geraintwhite.co.uk/)
 ==================
 
-My personal website
+The personal website of [Geraint White](https://www.linkedin.com/in/geraintwhite/)
