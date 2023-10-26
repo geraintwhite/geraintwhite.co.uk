@@ -13,7 +13,7 @@ function twitter_tagline (user, element) {
     'users/show.json?screen_name=' + escape(user),
     function (data) {
       var p = document.createElement('p');
-      p.innerText = data.description;
+      p.innerText = data.description || '';
       element.appendChild(p);
     });
 }
