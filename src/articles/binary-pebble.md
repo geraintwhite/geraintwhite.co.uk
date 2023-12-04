@@ -1,6 +1,6 @@
 <div class="img-container">![Screenshot of Pebble Binary](images/binary-pebble.png)</div>
 
-## [Pebble Binary](https://github.com/grit96/pebble-binary)<span class="lang">C</span>
+## [Pebble Binary](https://github.com/geraintwhite/pebble-binary)<span class="lang">C</span>
 
 After building Pebble Info I wanted to get into the Pebble C SDK. I decided to follow the Pebble SDK [Getting Started](https://developer.getpebble.com/getting-started/watchface-tutorial/part1/) guide to help me learn to build a watchface.
 

@@ -1,6 +1,6 @@
 {
   "name": "geraintwhite.co.uk",
-  "repository": "http://github.com/grit96/geraintwhite.co.uk",
+  "repository": "http://github.com/geraintwhite/geraintwhite.co.uk",
   "version": "0.0.0",
   "scripts": {
     "build": "gulp"

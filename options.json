@@ -10,8 +10,8 @@
             "url": "http://geraintwhite.co.uk"
         },
         "k9": {
-            "copy_to": "/var/www/projects/grit96",
-            "url": "http://pi.dvbris.com/projects/grit96"
+            "copy_to": "/var/www/projects/geraintwhite",
+            "url": "http://pi.dvbris.com/projects/geraintwhite"
         }
     }
 }

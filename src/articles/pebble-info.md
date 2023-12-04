@@ -1,6 +1,6 @@
 <div class="img-container">![Screenshot of Pebble Info](images/pebble.png)</div>
 
-## [Pebble Info](https://github.com/grit96/pebble_info)<span class="lang">JavaScript</span>
+## [Pebble Info](https://github.com/geraintwhite/pebble_info)<span class="lang">JavaScript</span>
 
 Recently I obtained a Pebble Smartwatch. I was keen to get into app development for it and, with my JavaScript background, the best place to start was [PebbleJS](https://developer.getpebble.com/docs/pebblejs/).
 
